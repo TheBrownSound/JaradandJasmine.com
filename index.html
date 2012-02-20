@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Jarad &amp; Jasmine</title>
+	<meta name="description" content="Jarad and Jasmine are getting married!">
+	<meta name="author" content="Jarad Comingdeer">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+  <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,900italic' rel='stylesheet' type='text/css'>
+  
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+  <div id="header">
+    <div id="nav">
+      <img class="logo" src="images/logo.png">
+      <ul>
+        <li><a class="scroll" href="#date">When &amp; Where</a></li>
+        <li><a class="scroll" href="#rsvp">RSVP</a></li>
+        <li><a class="scroll" href="#about">Registry</a></li>
+        <li><a class="scroll" href="#rsvp">Accomodations</a></li>
+      </ul>
+    </div>
+  </div>
+    
+  <div id="details" class="panel">
+    <div class="container">
+      <div class="info seven columns offset-by-nine">
+        <img src="images/announcement.png" alt="We're getting married!"/>
+        <img src="images/date.png" alt="October 5th, 2012"/>
+        <img src="images/location.png" alt="Ponte Family Estate Winery"/>
+      </div>
+    </div>
+  </div>
+  
+  <div id="about" class="panel">
+    <div class="container">
+      <div class="five columns">
+        <h2>What Jarad has to say about Jasmine</h2>
+      </div>
+      <div class="five columns offset-by-six">
+        <h2>What Jasmine has to say about Jarad</h2>
+      </div>
+    </div>
+  </div>
+  
+  <div id="location" class="panel">
+    <div class="container">
+      <div class="eight columns">
+      </div>
+    </div>
+  </div>
+  
+  <div id="rsvp" class="panel">
+    <div class="container">
+      <div class="eight columns">
+        <h2>Let us know if you are coming.</h2>
+        <h5>Please respond by September 10th, 2012 if you wish to attend</h5>
+        <form>
+          <label for="fname">Name(s)</label>
+          <input id="fname" name="name" type="text" />
+          <label for="fmail">Email</label>
+          <input id="fmail" name="mail" type="text" />
+          <label>Will you be attending?</label>
+          <input type="radio" name="attending" value="yes" /> Yes, can't wait to see you guys! :)<br/>
+          <input type="radio" name="attending" value="no" /> With regret, we won't be able to attend. :(
+          <label>Comments</label>
+          <textarea >
+          </textarea>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="container">
+      <h2>Gifts</h2>
+      <p>Please don't feel obligated to buy us gifts. The best gift you can give is joining us to celebrate our marriage. If you are intent on spending money on us, then we are registered at the following retailers.</p>
+      <h2>Registry</h2>
+      <div class="one-third column">
+  		  <h3>Crate &amp; Barrel</h3>
+  		  <a class="button">Link Button</a>
+  		</div>
+      <div class="one-third column">
+  		  <h3>Pottery Barn</h3>
+  		  <a class="button">Link Button</a>
+  		</div>
+  		<div class="one-third column">
+  		  <h3>Williams Sonoma</h3>
+  		  <a class="button">Link Button</a>
+  		</div>
+    </div>
+  </div>
+    
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="javascripts/tabs.js"></script>
+	
+	<script type="javascript">
+    $(document).ready(function(){
+        $(".scroll").click(function(event){
+            //prevent the default action for the click event
+            event.preventDefault();
+
+            //get the full url - like mysitecom/index.htm#home
+            var full_url = this.href;
+
+            //split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+            var parts = full_url.split("#");
+            var trgt = parts[1];
+
+            //get the top offset of the target anchor
+            var target_offset = $("#"+trgt).offset();
+            var target_top = target_offset.top;
+
+            //goto that anchor by setting the body scroll top to anchor top
+            $('html, body').animate({scrollTop:target_top}, 5000, 'linear');
+        });
+    });
+  </script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
