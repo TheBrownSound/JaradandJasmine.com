@@ -36,6 +36,13 @@ h1 {
   font-size: 36px;
 }
 
+h2 {
+  border-bottom: 2px solid #000;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
 p {
   font-size: 20px;
   font-weight: 400;
@@ -159,13 +166,12 @@ em {
   background-image: url('../images/ponte.jpg');
   background-position-x: right;
   background-repeat: no-repeat;
-  height: 500px;
 }
 
 #rsvp {
   background-color: #000;
   background-image: url('../images/kiss.jpg');
-  background-position-x: right;
+  background-position: bottom left;
   background-repeat: no-repeat;
   color: #FFF;
   height: 500px;

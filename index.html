@@ -18,11 +18,11 @@
 
 	<!-- CSS
   ================================================== -->
-  <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,900italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Alegreya+SC:400,700,900italic' rel='stylesheet' type='text/css'> -->
   
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
+  <link rel="stylesheet" href="stylesheets/base.css">
+  <link rel="stylesheet" href="stylesheets/skeleton.css">
+  <link rel="stylesheet" href="stylesheets/layout.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,16 +35,33 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
+  <!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="javascripts/tabs.js"></script>
+	
+  <script>
+      $(document).ready(function(){
+          $(".scroll").click(function(event){
+            event.preventDefault();
+            var full_url = this.href;
+            var parts = full_url.split("#");
+            var trgt = parts[1];
+            $('html, body').animate({scrollTop: $("#"+trgt).offset().top}, 1000);
+          });
+      });
+  </script>
+
 </head>
 <body>
   <div id="header">
     <div id="nav">
-      <img class="logo" src="images/logo.png">
+      <a class="scroll" href="#details"><img class="logo" src="images/logo.png"></a>
       <ul>
         <li><a class="scroll" href="#location">Location</a></li>
-        <li><a class="scroll" href="#rsvp">RSVP</a></li>
-        <li><a class="scroll" href="#about">Registry</a></li>
-        <li><a class="scroll" href="#rsvp">Accomodations</a></li>
+        <li><a class="scroll" href="#rsvp">Responses</a></li>
+        <li><a class="scroll" href="#about">Bride &amp; Groom</a></li>
+        <li><a class="scroll" href="#gifts">Registry</a></li>
       </ul>
     </div>
   </div>
@@ -61,16 +78,63 @@
   
   <div id="location" class="panel">
     <div class="container">
-      <div class="eight columns">
-        <img src="images/date.png" alt="October 5th, 2012"/>
-        <img src="images/location.png" alt="Ponte Family Estate Winery"/>
+      <div class="ten columns">
+        <h2>Location &amp; Accomodations</h2>
+        <h3>Wedding Ceremony &amp; Reception</h3>
+        Ponte Family Estate Winery
+        <address>35053 Rancho California Road<br/>
+          Temecula, California 92591</address>
+        
+        <h3>Lodging Nearby</h3>
+        <ul>
+          <li>
+            Ponte Vineyard Inn
+            <address>35053 Rancho California Road<br>
+              Temecula, California 92591</address>
+            <a href="tel:951-694-8855">951-694-8855</a>
+          </li>
+          <li>
+            South Coast Winery Resort &amp; Spa
+            <address>34843 Rancho California Rd.<br>
+              Temecula, California 92591</address>
+            <a href="tel:951-587-9463">951-587-9463</a>
+            <a href="http://www.wineresort.com/">wineresort.com</a>
+          </li>
+          <li>
+            Embassy Suites Hotel
+            <address>29345 Rancho California Rd.<br>
+              Temecula, California 92591</address>
+            <a href="tel:951-676-5656">951-676-5656</a>
+          </li>
+          <li>
+            Temecula Creek Inn
+            <address>44501 Rainbow Cyn. Rd.<br>
+              Temecula, California 92591</address>
+            <a href="tel:951-694-1000">951-694-1000</a>
+          </li>
+          <li>
+            La Quinta Inns &amp; Suites
+            <address>27330 Jefferson Ave<br>
+              Temecula, California 92590</address>
+            <a href="tel:951-296-1003">951-296-1003</a>
+          </li>
+          <li>
+            Fairfield Inns &amp; Suites
+            <address>47416 Jefferson Ave.<br>
+              Temecula, California 92590</address>
+            <a href="tel:951-587-9800">951-587-9800</a>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+        
       </div>
     </div>
   </div>
   
   <div id="rsvp" class="panel">
     <div class="container">
-      <div class="eight columns">
+      <div class="eight columns offset-by-eight">
         <h2>Let us know if you are coming.</h2>
         <h5>Please respond by September 10th, 2012 if you wish to attend</h5>
         <form>
@@ -101,7 +165,7 @@
     </div>
   </div>
   
-  <div class="panel">
+  <div id="gifts" class="panel">
     <div class="container">
       <h2>Gifts</h2>
       <p>Please don't feel obligated to buy us gifts. The best gift you can give is joining us to celebrate our marriage. If you are intent on spending money on us, then we are registered at the following retailers.</p>
@@ -110,44 +174,16 @@
   		  <h3>Crate &amp; Barrel</h3>
   		  <a class="button">Link Button</a>
   		</div>
-      <div class="one-third column">
-  		  <h3>Pottery Barn</h3>
-  		  <a class="button">Link Button</a>
-  		</div>
   		<div class="one-third column">
   		  <h3>Williams Sonoma</h3>
   		  <a class="button">Link Button</a>
   		</div>
+  		<div class="one-third column">
+  		  <h3>Amazon.com</h3>
+  		  <a class="button">Link Button</a>
+  		</div>
     </div>
   </div>
-    
-	<!-- JS
-	================================================== -->
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="javascripts/tabs.js"></script>
-	
-	<script type="javascript">
-    $(document).ready(function(){
-        $(".scroll").click(function(event){
-            //prevent the default action for the click event
-            event.preventDefault();
-
-            //get the full url - like mysitecom/index.htm#home
-            var full_url = this.href;
-
-            //split the url by # and get the anchor target name - home in mysitecom/index.htm#home
-            var parts = full_url.split("#");
-            var trgt = parts[1];
-
-            //get the top offset of the target anchor
-            var target_offset = $("#"+trgt).offset();
-            var target_top = target_offset.top;
-
-            //goto that anchor by setting the body scroll top to anchor top
-            $('html, body').animate({scrollTop:target_top}, 5000, 'linear');
-        });
-    });
-  </script>
 
 <!-- End Document
 ================================================== -->
