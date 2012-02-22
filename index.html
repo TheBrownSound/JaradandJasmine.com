@@ -40,7 +40,7 @@
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="javascripts/tabs.js"></script>
 	
-  <script>
+  <script type="text/javascript">
       $(document).ready(function(){
           $(".scroll").click(function(event){
             event.preventDefault();
@@ -71,62 +71,66 @@
       <div class="info six columns offset-by-ten omega">
         <img src="images/announcement.png" alt="We're getting married!"/>
         <p><span class="names">Jarad Comingdeer<br />&amp;<br />Jasmine Calloway<br/></span> will be getting married on <span class="date">October 5th, 2012</span> at Ponte Family Estate Winery in Temecula California.</p>
-        <p class="block">Please join us for a quick ceremony at <em>5:00pm</em> followed by an evening of good food, friends, and music to celebrate the start of our Marriage.</p>
+        <p class="block">Please join us for our ceremony at <em>5:00pm</em> followed by an evening of good food, friends, and music to celebrate the start of our Marriage.</p>
       </div>
     </div>
   </div>
   
   <div id="location" class="panel">
     <div class="container">
-      <div class="ten columns">
+      <header>
         <h2>Location &amp; Accomodations</h2>
+      </header>
+      <div id="wedding-info" class="eight columns">
         <h3>Wedding Ceremony &amp; Reception</h3>
-        Ponte Family Estate Winery
-        <address>35053 Rancho California Road<br/>
-          Temecula, California 92591</address>
-        
-        <h3>Lodging Nearby</h3>
-        <ul>
-          <li>
-            Ponte Vineyard Inn
+        <div class="block">
+          Ponte Family Estate Winery
+          <address>35053 Rancho California Road<br/>
+            Temecula, California 92591</address>
+        </div>
+      </div>
+      
+      <div class="eight columns">  
+        <h3>Nearby Accomodations</h3>
+        <dl id="accomodations">
+          <dt>Ponte Vineyard Inn<dt>
+          <dd>
             <address>35053 Rancho California Road<br>
               Temecula, California 92591</address>
             <a href="tel:951-694-8855">951-694-8855</a>
-          </li>
-          <li>
-            South Coast Winery Resort &amp; Spa
+          <dd>
+          <dt>South Coast Winery Resort &amp; Spa<dt>
+          <dd>
             <address>34843 Rancho California Rd.<br>
               Temecula, California 92591</address>
             <a href="tel:951-587-9463">951-587-9463</a>
             <a href="http://www.wineresort.com/">wineresort.com</a>
-          </li>
-          <li>
-            Embassy Suites Hotel
+          </dd>
+          <dt>Embassy Suites Hotel</dt>
+          <dd>
             <address>29345 Rancho California Rd.<br>
               Temecula, California 92591</address>
             <a href="tel:951-676-5656">951-676-5656</a>
-          </li>
-          <li>
-            Temecula Creek Inn
+          </dd>
+          <dt>Temecula Creek Inn</dt>
+          <dd>  
             <address>44501 Rainbow Cyn. Rd.<br>
               Temecula, California 92591</address>
             <a href="tel:951-694-1000">951-694-1000</a>
-          </li>
-          <li>
-            La Quinta Inns &amp; Suites
+          </dd>
+          <dt>La Quinta Inns &amp; Suites</dt>
+          <dd>  
             <address>27330 Jefferson Ave<br>
               Temecula, California 92590</address>
             <a href="tel:951-296-1003">951-296-1003</a>
-          </li>
-          <li>
-            Fairfield Inns &amp; Suites
+          </dd>
+          <dt>Fairfield Inns &amp; Suites</dt>
+          <dd>  
             <address>47416 Jefferson Ave.<br>
               Temecula, California 92590</address>
             <a href="tel:951-587-9800">951-587-9800</a>
-          </li>
-          <li></li>
-          <li></li>
-        </ul>
+          </dd>
+        </dl>
         
       </div>
     </div>
@@ -134,7 +138,7 @@
   
   <div id="rsvp" class="panel">
     <div class="container">
-      <div class="eight columns offset-by-eight">
+      <div class="nine columns offset-by-seven">
         <h2>Let us know if you are coming.</h2>
         <h5>Please respond by September 10th, 2012 if you wish to attend</h5>
         <form>
@@ -142,11 +146,13 @@
           <input id="fname" name="name" type="text" />
           <label for="fmail">Email</label>
           <input id="fmail" name="mail" type="text" />
-          <label>Will you be attending?</label>
-          <input type="radio" name="attending" value="yes" /> Yes, can't wait to see you guys! :)<br/>
-          <input type="radio" name="attending" value="no" /> With regret, we won't be able to attend. :(
+          <span class="radio-options">
+            <label>Will you be attending?</label><br>
+            <input type="radio" name="attending" value="yes" id="yes"/><label for="yes">Yes, can't wait!</label><br>
+            <input type="radio" name="attending" value="no" id="no"/><label for="no">With regret, we won't be able to attend.</label>
+          </span>
           <label>Comments</label>
-          <textarea >
+          <textarea rows="10">
           </textarea>
           <input type="submit" value="Send" />
         </form>
@@ -157,10 +163,18 @@
   <div id="about" class="panel">
     <div class="container">
       <div class="five columns">
-        <h2>What Jarad has to say about Jasmine</h2>
+        <h2>Jarad</h2>
+        <blockquote>
+          Something about how Jasmine thinks I'm super awesome and she wants to spend the rest of her life with me.
+        </blockquote>
+        <p>Born Semptember 5th 1984. Son of Jerry and Kerry Comingdeer.</p>
       </div>
       <div class="five columns offset-by-six">
-        <h2>What Jasmine has to say about Jarad</h2>
+        <h2>Jasmine</h2>
+        <blockquote>
+          Jasmine is one of the most energetic and caring people I have ever met. I am so fortunate to have found someone I can share the rest of my life with.
+        </blockquote>
+        <p>Born June 3rd 1984. Son of Jamie and Gloria Calloway.</p>
       </div>
     </div>
   </div>

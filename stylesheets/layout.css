@@ -26,6 +26,7 @@ body {
   background-color: #FFF;
   color: #352525;
   font-family: 'Alegreya SC', serif;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, p, a {
@@ -37,10 +38,14 @@ h1 {
 }
 
 h2 {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid;
   font-size: 36px;
   font-weight: bold;
   margin: 20px auto;
+}
+
+h3 {
+  font-weight: bold;
 }
 
 p {
@@ -52,6 +57,27 @@ p {
 em {
   font-size: 120%;
   font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  font-size: 18px;
+}
+
+.block {
+  background-color: rgba(53,36,35, .8);
+  color: #e2d1ab;
+  border: 2px dotted;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 30px;
+  padding: 20px;
+  text-shadow: none;
+}
+
+.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+  font-family: 'Alegreya SC', serif;
+  font-style: italic;
 }
 
 /* #Page Styles
@@ -141,18 +167,6 @@ em {
   margin: 10px;
 }
 
-#details .block {
-  background-color: rgba(53,36,35, .8);
-  color: #e2d1ab;
-  border: 2px dotted;
-  font-size: 20px;
-  font-style: italic;
-  line-height: 30px;
-  padding: 20px;
-  text-shadow: none;
-}
-
-
 #about {
   background-color: #48434b;
   background-image: url('../images/door.jpg');
@@ -168,13 +182,37 @@ em {
   background-repeat: no-repeat;
 }
 
+#location #wedding-info {
+  margin-bottom: 20px;
+  font-size: 120%;
+  float: right;
+}
+
+#location #main-address {
+  background-color: rgba(0,0,0,.8);
+  border: 1px solid #FFF;
+  color: #FFF;
+}
+
+#location dt {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#location #accomodations dd {
+  margin-bottom: 30px;
+}
+
+#location address, #location a {
+  font-size: 110%;
+}
+
 #rsvp {
   background-color: #000;
   background-image: url('../images/kiss.jpg');
   background-position: bottom left;
   background-repeat: no-repeat;
   color: #FFF;
-  height: 500px;
 }
 
 #rsvp h2, #rsvp h5 {
@@ -194,6 +232,11 @@ em {
   filter: dropshadow(color=#000, offx=1, offy=1);
 }
 
+#rsvp .radio-options {
+  display: block;
+  margin-bottom: 20px;
+}
+
 #date .announcement {
   font-size: 36px;
   display: block;
@@ -204,7 +247,7 @@ em {
   background-position-y: 55px;
   border-bottom: 1px solid #FFF;
   min-height: 80%;
-  padding: 80px 0px 20px;
+  padding: 80px 0px 80px;
   width: 100%;
   
   -webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 1);
