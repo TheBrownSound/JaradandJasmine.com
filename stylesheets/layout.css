@@ -33,8 +33,13 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Alegreya SC', serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #352525;
+}
+
 h1 {
-  font-size: 36px;
+  font-size: 46px;
+  font-weight: bold;
 }
 
 h2 {
@@ -66,7 +71,7 @@ a:hover {
 p {
   font-size: 20px;
   font-weight: 400;
-  margin: 20px 5px;
+  margin: 5px 5px 20px 5px;
 }
 
 em {
@@ -129,13 +134,13 @@ input[type="radio"]:focus {
 }
 
 .block {
-  background-color: rgba(53,36,35, .8);
+  background-color: rgba(53,36,35, .9);
   color: #e4e4dc;
   border: 2px dotted;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 24px;
   padding: 10px;
-  text-shadow: none;
+  text-shadow: #000 1px 1px;
 }
 
 .block h1, .block h2, .block h3, .block h4, .block h5, .block h6 {
@@ -197,22 +202,20 @@ input[type="radio"]:focus {
 #details {
   background-color: #e4e4dc;
   background-image: url('../images/main.jpg');
-  background-position: bottom center;
+  background-position: 33% 100%;
   background-repeat: no-repeat;
   font-weight: bold;
   text-align: center;
   text-shadow: #e2d1ab 1px 1px;
 }
 
-#details img {
-  display: block;
-  max-width: 300px;
-  margin: 20px auto;
-  width: 100%;
-}
-
-#details p {
-  margin: 30px 10px;
+#details h1 {
+  background-image: url('../images/title_flourish.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 35px;
+  padding-bottom: 41px;
+  margin-top: 20px;
 }
 
 #details .names {
@@ -236,20 +239,27 @@ input[type="radio"]:focus {
 #about {
   background-color: #48434b;
   background-image: url('../images/door.jpg');
-  background-position-x: center;
+  background-position: bottom center;
   background-repeat: no-repeat;
 }
 
 #location {
   background-color: #c5d3bb;
   background-image: url('../images/ponte.jpg');
-  background-position-x: right;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
 #location #wedding-info {
+  background-image: url('../images/brideandgroom.png');
+  background-position: top right;
+  background-repeat: no-repeat;
   margin-bottom: 20px;
   font-size: 120%;
+}
+
+#location #wedding-info .block {
+  padding-right: 240px;
 }
 
 #location #main-address {
@@ -315,6 +325,13 @@ input[type="radio"]:focus {
 #date .announcement {
   font-size: 36px;
   display: block;
+}
+
+#gifts {
+  background-color: #000;
+  background-image: url('../images/curvy_tile.jpg');
+  background-position: top center;
+  background-repeat: repeat;
 }
 
 .panel {
