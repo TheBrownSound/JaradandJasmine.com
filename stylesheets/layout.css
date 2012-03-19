@@ -39,21 +39,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 46px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 h2 {
   background: url('../images/flourish.png') top center no-repeat;
   border-bottom: 2px dashed;
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 20px auto;
   padding-top: 20px;
   text-align: center;
 }
 
-h3 {
-  font-weight: bold;
+h3, h5 {
+  font-weight: 700;
 }
 
 a {
@@ -75,8 +75,7 @@ p {
 }
 
 em {
-  font-size: 120%;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 em.isolate {
@@ -96,7 +95,7 @@ blockquote {
   border: 0;
   font-size: 28px;
   font-style: italic;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 30px;
   padding: 20px;
   position: relative;
@@ -105,7 +104,7 @@ blockquote {
 
 blockquote h6 {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 32px;
 }
 
@@ -134,9 +133,10 @@ input[type="radio"]:focus {
 }
 
 .block {
+  background-color: #352525;
   background-color: rgba(53,36,35, .9);
   color: #e4e4dc;
-  border: 2px dotted;
+  border: 2px dashed #bda291;
   font-size: 20px;
   line-height: 24px;
   padding: 10px;
@@ -147,9 +147,29 @@ input[type="radio"]:focus {
   color: #e4e4dc;
 }
 
-.button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active {
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
   font-family: 'Alegreya SC', serif;
   font-style: italic;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #759271;
+	background: #b1f3a9; /* Old browsers */
+	background: #b1f3a9 -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+	background: #b1f3a9 -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+	background: #b1f3a9 -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: #b1f3a9 -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+	background: #b1f3a9 -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+	background: #b1f3a9 linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+}
+
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+	background: #d1f4cd; /* Old browsers */
+	background: #d1f4cd -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+	background: #d1f4cd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+	background: #d1f4cd -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: #d1f4cd -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+	background: #d1f4cd -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+	background: #d1f4cd linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
 }
 
 /* #Page Styles
@@ -188,7 +208,7 @@ input[type="radio"]:focus {
 #nav ul li a {
   border-bottom: 1px solid #FFF;
   color: #e2d1ab;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   font-style: italic;
   text-decoration: none;
@@ -204,24 +224,35 @@ input[type="radio"]:focus {
   background-image: url('../images/main.jpg');
   background-position: 33% 100%;
   background-repeat: no-repeat;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   text-shadow: #e2d1ab 1px 1px;
 }
 
-#details h1 {
-  background-image: url('../images/title_flourish.png');
+#details .container {
+  background-image: url('../images/big_flourish_top.png');
   background-position: top center;
   background-repeat: no-repeat;
-  padding-top: 35px;
-  padding-bottom: 41px;
   margin-top: 20px;
+  padding-top: 38px;
+}
+
+#details h1 {
+  background-image: url('../images/big_flourish_bottom.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  padding-bottom: 48px;
+}
+
+#details h1 em {
+  font-size: 100%;
+  font-style: normal;
 }
 
 #details .names {
   display: block;
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 36px;
   margin: 10px 0px;
 }
@@ -231,7 +262,7 @@ input[type="radio"]:focus {
   border-bottom: 2px dashed #000;
   display: block;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 36px;
   margin: 10px;
 }
@@ -270,15 +301,30 @@ input[type="radio"]:focus {
 
 #location h4 {
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 700;
+}
+
+#location h5 {
+  margin-top: 10px;
 }
 
 #location #accomodations li {
   margin-bottom: 20px;
 }
 
+#location #accomodations li ul {
+  margin-left: 0px;
+}
+
+#location #accomodations li ul li {
+  margin-bottom: 5px;
+}
+
 #location #accomodations .block {
-  height: 200px;
+  background-image: url('../images/box_flourish.png');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  height: 240px;
   overflow: hidden;
 }
 
@@ -289,7 +335,7 @@ input[type="radio"]:focus {
 
 #location a {
   display: block;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 #rsvp {
@@ -332,6 +378,32 @@ input[type="radio"]:focus {
   background-image: url('../images/curvy_tile.jpg');
   background-position: top center;
   background-repeat: repeat;
+  text-align: center;
+}
+
+#gifts img {
+  background-color: #352525;
+  background-color: rgba(53,36,35, .9);
+  display: block;
+  margin: 0px 5%;
+  padding: 5%;
+  max-width: 300px;
+  width: 80%;
+}
+
+#gifts a.button {
+  border-top: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  -webkit-border-radius: 0px 0px 6px 6px;
+  border-radius: 0px 0px 6px 6px;
 }
 
 .panel {
@@ -397,6 +469,10 @@ input[type="radio"]:focus {
     
     #details {
       background-image: url('../images/main_mobile.jpg');
+    }
+    
+    #location #wedding-info .block {
+      padding-right: 10px;
     }
     
     .panel {
