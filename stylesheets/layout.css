@@ -148,6 +148,7 @@ input[type="radio"]:focus {
 }
 
 .button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  color: #352525;
   font-family: 'Alegreya SC', serif;
   font-style: italic;
   font-size: 16px;
@@ -170,6 +171,10 @@ input[type="radio"]:focus {
 	background: #d1f4cd -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
 	background: #d1f4cd -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
 	background: #d1f4cd linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+}
+
+.button:visited, button:visited, input[type="submit"]:visited, input[type="reset"]:visited, input[type="button"]:visited {
+  color: #352525;
 }
 
 /* #Page Styles
