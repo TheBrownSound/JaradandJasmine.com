@@ -87,7 +87,6 @@ em.isolate {
 }
 
 label {
-  display: inline-block;
   font-size: 18px;
 }
 
@@ -382,6 +381,13 @@ input[type="radio"]:focus {
   color: #FFF;
 }
 
+#rsvp form {
+  background-color: #333333;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 6px;
+  padding: 10px;
+}
+
 #rsvp input[type="text"], #rsvp textarea {
   width: 96%;
   max-width: 96%;
@@ -390,14 +396,45 @@ input[type="radio"]:focus {
   box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 1);
 }
 
+#rsvp input[type="submit"] {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
 #rsvp h2, #rsvp h5, #rsvp label {
   text-shadow: 1px 1px 0px #000;
   filter: dropshadow(color=#000, offx=1, offy=1);
 }
 
+#rsvp span.attending {
+  display: block;
+  margin-bottom: 20px;
+  min-height: 40px;
+}
+
+#rsvp span.attending-radio {
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+#rsvp input[type="radio"] {
+  float: left;
+}
+
+#rsvp span.attending-radio p {
+  margin: 0px 0px 0px 20px;
+}
+
 #rsvp .radio-options {
   display: block;
   margin-bottom: 20px;
+}
+
+#rsvp .form-end {
+  clear: both;
+  display: block;
+  text-align: right;
 }
 
 #date .announcement {
@@ -486,12 +523,12 @@ input[type="radio"]:focus {
 	   padding: 0px;
 	  }
 	  #nav ul {
+      border-top: 1px solid #FFF;
 	    margin-bottom: 0px;
 	  }
     #nav ul li {
       margin: 0px;
-      border-top: 1px solid #FFF;
-      width: 50%;
+      width: 33%;
       float: left;
       height: 30px;
       line-height: 30px;
@@ -535,6 +572,11 @@ input[type="radio"]:focus {
     
     .panel {
       padding-top: 140px;
+    }
+
+    #rsvp span.attending-radio {
+      float: none;
+      width: 100%;
     }
 	}
 
