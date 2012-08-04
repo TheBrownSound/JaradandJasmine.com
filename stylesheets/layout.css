@@ -370,6 +370,7 @@ input[type="radio"]:focus {
 }
 
 #rsvp {
+  display: none;
   background-color: #000;
   background-image: url('../images/kiss.jpg');
   background-position: bottom left;
