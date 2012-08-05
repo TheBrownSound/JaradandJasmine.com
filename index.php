@@ -204,7 +204,7 @@
 						<span class="attending-radio"><input type="radio" value="no" name="attending" /><p>Sorry! We can't make it.</p></span>
 					</span>
 					<label for="message">Special Considerations?:</label>
-					<textarea id="message" name="message" rows="10">Vegitarian, alergies, ect.</textarea>
+					<textarea id="message" name="message" rows="10">Vegetarian, allergies, ect.</textarea>
 					<span class="form-end">
 						<input type="submit" value="RSVP" />
 					</span>
