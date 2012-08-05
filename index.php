@@ -40,6 +40,7 @@
 	================================================== -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="javascripts/tabs.js"></script>
+	<script src="javascripts/jquery.form.js"></script>
 	
 	<script type="text/javascript">
 			$(document).ready(function(){
@@ -62,6 +63,10 @@
 						    this.value = this.defaultValue;
 						}
 				});
+
+				$('#rsvpform').ajaxForm(function() { 
+                	alert("Thank you for your response!"); 
+            	});
 			});
 	</script>
 
