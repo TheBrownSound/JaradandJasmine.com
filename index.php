@@ -193,9 +193,9 @@
 				<h2>RSVP</h2>
 				<form id="rsvpform" action="rsvp.php" method="post">
 					<label for="name">Name(s):</label>
-					<input id="name" type="text" />
+					<input id="name" name="name" type="text" />
 					<label for="email">Email:</label>
-					<input id="email" type="text" />
+					<input id="email" name="email" type="text" />
 					<label for="phone">Phone:</label>
 					<input id="phone" type="text" />
 					<span class="attending">
@@ -204,7 +204,7 @@
 						<span class="attending-radio"><input type="radio" value="no" name="attending" /><p>Sorry! We can't make it.</p></span>
 					</span>
 					<label for="message">Special Considerations?:</label>
-					<textarea id="message" rows="10">Vegitarian, alergies, ect.</textarea>
+					<textarea id="message" name="message" rows="10">Vegitarian, alergies, ect.</textarea>
 					<span class="form-end">
 						<input type="submit" value="RSVP" />
 					</span>
