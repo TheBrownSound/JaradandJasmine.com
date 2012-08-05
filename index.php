@@ -197,7 +197,7 @@
 					<label for="email">Email:</label>
 					<input id="email" name="email" type="text" />
 					<label for="phone">Phone:</label>
-					<input id="phone" type="text" />
+					<input id="phone" name="phone" type="text" />
 					<span class="attending">
 						<label>Can you make it?</label>
 						<span class="attending-radio"><input type="radio" value="yes" name="attending" /><p>Yes! Can't wait!</p></span>
