@@ -43,31 +43,31 @@
 	<script src="javascripts/jquery.form.js"></script>
 	
 	<script type="text/javascript">
-			$(document).ready(function(){
-				$(".scroll").click(function(event){
-					event.preventDefault();
-					var full_url = this.href;
-					var parts = full_url.split("#");
-					var trgt = parts[1];
-					$('html, body').animate({scrollTop: $("#"+trgt).offset().top}, 1000);
-				});
-
-				$("#rsvpform textarea")
-					.focus(function() {
-						if (this.value === this.defaultValue) {
-						    this.value = '';
-						}
-					})
-					.blur(function() {
-						if (this.value === '') {
-						    this.value = this.defaultValue;
-						}
-				});
-
-				$('#rsvpform').ajaxForm(function() { 
-                	alert("Thank you for your response!"); 
-            	});
+		$(document).ready(function(){
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				var full_url = this.href;
+				var parts = full_url.split("#");
+				var trgt = parts[1];
+				$('html, body').animate({scrollTop: $("#"+trgt).offset().top}, 1000);
 			});
+
+			$('#rsvpform').ajaxForm(function() { 
+		    	alert("Thank you for your response!"); 
+			});
+
+			$("#rsvpform textarea")
+				.focus(function() {
+					if (this.value === this.defaultValue) {
+					    this.value = '';
+					}
+				})
+				.blur(function() {
+					if (this.value === '') {
+					    this.value = this.defaultValue;
+					}
+			});
+		});
 	</script>
 
 </head>
